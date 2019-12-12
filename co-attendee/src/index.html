@@ -34,7 +34,7 @@
                     <div class="radio">
                       <label>
                         <span><i class="fa fa-caret-right fa-2x correct-answer" aria-hidden="true"></i></span>
-                        <span class="button"><input type="radio" name="optionsRadios" value="20"></span>
+                        <span class="button"><input type="radio" name="optionsRadios" value="20" checked=""></span>
                         <span class="question-label">I want to know more about the event</span>
                       </label>
                     </div>
@@ -194,7 +194,7 @@
                         <div class="radio">
                           <label>
                             <span><i class="fa fa-caret-right fa-2x correct-answer" aria-hidden="true"></i></span>
-                            <span class="button"><input type="radio" name="optionsRadios" value="20"></span>
+                            <span class="button"><input type="radio" name="optionsRadios" value="20" checked></span>
                             <span class="question-label">No, I want to contact the Organizer.</span>
                           </label>
                         </div>
@@ -211,13 +211,27 @@
             <!-- STEP 3 -->
             <fieldset>
                 <h2 class="fs-title">Contact the Organizer</h2>
-                <input type="text" name="name" placeholder="Your Name"/>
-                <input type="email" name="email" placeholder="Email Address"/>
-                <input type="text" name="reason" placeholder="Contact Reason"/>
+                <input id="i-name" type="text" name="name" placeholder="Your Name" value="Cristian Moyano" />
+                <input id="i-email" type="email" name="email" placeholder="Email Address" value="email@gmail.com" />
+                <input id="i-reason" type="text" name="reason" placeholder="Contact Reason" value="OTHER" />
                 <h3 class="fs-subtitle" style="text-align: left;">Message</h3>
-                <textarea class="form-control" rows="5" id="comment"></textarea>
+                <textarea id="i-message" class="form-control" rows="5" id="comment">Unfortunatly Iam not able to attend tonight.</textarea>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+                <input id="success-btn" type="button" name="next" class="next action-button" value="Subtmit"/>
+            </fieldset>
+            <!-- END STEP 3 -->
+
+            <!-- CONFIRM 4 -->
+            <fieldset>
+                <h2 class="fs-title">Success</h2>
+                <img src="https://www.unibetcommunity.com/t5/image/serverpage/image-id/36758i2F0096A6F9B0B877/image-size/large/is-moderation-mode/true?v=1.0&px=999" alt="Success" width="300px">
+                <!-- <h3 class="fs-subtitle">Your name: </h3><span id="s-name"></span>
+                <h3 class="fs-subtitle">Email Address: </h3><span id="s-email"></span>
+                <h3 class="fs-subtitle">Contact Reason: </h3><span id="s-reason"></span> -->
+                <h3 class="fs-subtitle">Message: </h3>
+                <p>
+                  <span id="s-message"></span>
+                </p>
             </fieldset>
             <!-- END STEP 3 -->
 
