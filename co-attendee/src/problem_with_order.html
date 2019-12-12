@@ -1,0 +1,94 @@
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+
+<!-- MultiStep Form -->
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form id="msform">
+            <!-- progressbar -->
+           <!--  <ul id="progressbar">
+                <li class="active">Personal Details</li>
+                <li>Social Profiles</li>
+                <li>Account Setup</li>
+            </ul> -->
+            <h3>How can we help you?</h3>
+            <br>
+            <!-- fieldsets -->
+
+
+
+            <!-- STEP 2 -->
+            <fieldset>
+            <div style="text-align: left;">
+                <h4>
+                    <div class="radio">
+                      <label>
+                        <span class="button"><input id="refund-request" type="radio" name="optionOrders" value="refund-request"></span>
+                        <span class="question-label">I want to request a refund</span>
+                      </label>
+                    </div>
+
+                    <div class="radio">
+                      <label>
+                        <span class="button"><input id="claim-ticket" type="radio" name="optionOrders" value="claim-ticket"></span>
+                        <span class="question-label">I want to see my ticket</span>
+                      </label>
+                    </div>
+                </h4>
+            </div>
+            <input onclick="onInitPrevious()" type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+            <input onclick="onNextOrder()" type="button" name="next" class="next action-button" value="Next"/>
+
+            </fieldset>
+            <!-- END STEP 2 -->
+
+            <!-- STEP 3 -->
+            <fieldset>
+                <h2 class="fs-title">Order: #954099251</h2>
+                <img src="https://i.imgur.com/PRUOgnd.png" alt="Success" width="500px">
+                <!-- <h3 class="fs-subtitle">Your name: </h3><span id="s-name"></span>
+                <h3 class="fs-subtitle">Email Address: </h3><span id="s-email"></span>
+                <h3 class="fs-subtitle">Contact Reason: </h3><span id="s-reason"></span> -->
+                <h3 class="fs-subtitle"><a href="#">Download</a> </h3>
+                <p>
+                  <span id="s-message"></span>
+                </p>
+
+                <!-- Use an element to toggle between a like/dislike icon -->
+                <h3 class="fs-subtitle">Did you like the tool?  <i onclick="onLike(this)" class="fa fa-thumbs-up"></i></h3>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+            </fieldset>
+            <!-- END STEP 3 -->
+
+            <!-- STEP 3 -->
+            <fieldset>
+                <h2 class="fs-title">Contact the Organizer</h2>
+                <input id="i-name" type="text" name="name" placeholder="Your Name" value="Cristian Moyano" />
+                <input id="i-email" type="email" name="email" placeholder="Email Address" value="email@gmail.com" />
+                <input id="i-reason" type="text" name="reason" placeholder="Contact Reason" value="OTHER" />
+                <h3 class="fs-subtitle" style="text-align: left;">Message</h3>
+                <textarea id="i-message" class="form-control" rows="5" id="comment">Unfortunately I'm not able to attend tonight.</textarea>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input id="success-btn" type="button" name="next" class="next action-button" value="Subtmit"/>
+            </fieldset>
+            <!-- END STEP 3 -->
+
+
+
+        </form>
+
+    </div>
+</div>
+<!-- /.MultiStep Form -->
+
+
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script src="script.js"></script>
+
