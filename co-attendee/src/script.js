@@ -88,12 +88,30 @@ $("#success-btn").click(function(){
 
 });
 
+function showLeftFAQ() {
+  // align survey left
+  $(".survey").removeClass("col-md-offset-3");
+  $(".survey").addClass("col-md-offset-1");
+   $(".faqs").show("slow");
+}
+
+function hideLeftFAQ() {
+  // align survey center
+  $(".survey").removeClass("col-md-offset-1");
+  $(".survey").addClass("col-md-offset-3");
+  $(".faqs").hide("slow");
+}
+
 
 
 // https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_filters_anything
 $(document).ready(function(){
+
+  // search content
   $("#search").on("keyup", function() {
+
     $("#context").removeClass("hide");
+
     $("#final-question").removeClass("hide");
     $("#final-question-btn").removeClass("hide");
 
@@ -102,10 +120,30 @@ $(document).ready(function(){
       $("#context").addClass("hide");
       $("#final-question").addClass("hide");
     }
+
     $("#context button").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
+
   });
+
+    // search content
+  $("#i-subject").on("keyup", function() {
+
+    $("#faq-context").removeClass("hide");
+
+    showLeftFAQ();
+
+    let value = $(this).val().toLowerCase();
+    if (!value || 0 === value.length) {
+      hideLeftFAQ();
+    }
+
+    $("#faq-context button").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
 
 });
 
@@ -145,9 +183,6 @@ function onInitPrevious() {
 function onLike(x) {
   x.classList.toggle("fa-thumbs-down");
 }
-
-
-
 
 
 

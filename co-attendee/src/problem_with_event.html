@@ -4,10 +4,11 @@
 
 <link rel="stylesheet" href="style.css">
 
-
 <!-- MultiStep Form -->
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+
+    <!-- SURVEY -->
+    <div class="survey col-sm-6 col-md-offset-3">
         <form id="msform">
             <!-- progressbar -->
            <!--  <ul id="progressbar">
@@ -18,8 +19,6 @@
             <h3>How can we help you?</h3>
             <br>
             <!-- fieldsets -->
-
-
 
             <!-- STEP 2 -->
             <fieldset>
@@ -190,6 +189,10 @@
                 <input id="i-name" type="text" name="name" placeholder="Your Name" value="Cristian Moyano" />
                 <input id="i-email" type="email" name="email" placeholder="Email Address" value="email@gmail.com" />
                 <input id="i-reason" type="text" name="reason" placeholder="Contact Reason" value="OTHER" />
+
+                <h3 class="fs-subtitle" style="text-align: left;">Subject</h3>
+                <input id="i-subject" type="text" name="subject" placeholder="Subject" value="" />
+
                 <h3 class="fs-subtitle" style="text-align: left;">Message</h3>
                 <textarea id="i-message" class="form-control" rows="5" id="comment">Hi. Can I bring my daughter who is 6? Thanks.</textarea>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
@@ -242,8 +245,60 @@
             <!-- END STEP 3 -->
 
         </form>
+    </div>
+    <!-- END SURVEY -->
+
+    <!-- FAQS -->
+    <div class="col-sm-4 faqs" style="display: none;">
+        <form id="msform">
+            <h3>Public questions</h3>
+
+            <!-- STEP 2 -->
+            <fieldset>
+
+            <!-- WRAPPER -->
+            <div style="text-align: left;">
+
+                <!-- CONTENT -->
+                <div id="faq-context" class="hide pre-scrollable">
+
+                    <!-- GENERAL FAQs -->
+                    <h3 class="fs-subtitle">General</h3>
+
+                    <p>
+                      <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#refund-eb-faq" aria-expanded="false" aria-controls="refund-eb-faq">
+                      Can I bring my son who is 10?
+                      <br>
+                      <b>Yes, you can.</b>
+                      </button>
+                    </p>
+
+                    <p>
+                      <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#refund-eb-faq" aria-expanded="false" aria-controls="refund-eb-faq">
+                        Is this an Adult Only event?
+                        <br>
+                        <b>No, this event is open to anyone.</b>
+                      </button>
+                    </p>
+
+                    <!-- END GENERAL FAQs -->
+                    <p></p>
+
+
+                </div>
+                <!-- END CONTENT -->
+
+            </div>
+            <!-- END WRAPPER -->
+
+            </fieldset>
+            <!-- END STEP 2 -->
+
+        </form>
 
     </div>
+    <!-- END FAQS -->
+
 </div>
 <!-- /.MultiStep Form -->
 
