@@ -80,6 +80,15 @@ $(".submit").click(function(){
   return false;
 })
 
+$("#success-btn").click(function(){
+    $("#s-name").text($("#i-name").val());
+    $("#s-email").text($("#i-email").val());
+    $("#s-reason").text($("#i-reason").val());
+    $("#s-message").text($("#i-message").val());
+
+});
+
+
 
 // https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_filters_anything
 $(document).ready(function(){
@@ -88,7 +97,11 @@ $(document).ready(function(){
     $("#final-question").removeClass("hide");
     $("#final-question-btn").removeClass("hide");
 
-    var value = $(this).val().toLowerCase();
+    let value = $(this).val().toLowerCase();
+    if (!value || 0 === value.length) {
+      $("#context").addClass("hide");
+      $("#final-question").addClass("hide");
+    }
     $("#context button").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
