@@ -106,7 +106,39 @@ $(document).ready(function(){
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
+
 });
+
+function onStart() {
+  let optionSelected = $('input[name=optionsRadios]:checked').val();
+  if (optionSelected === "order-issue") {
+    window.location.href = "problem_with_order.html";
+  } else {
+    window.location.href = "problem_with_event.html";
+  }
+}
+
+function onNextOrder() {
+  let optionSelected = $('input[name=optionOrders]:checked').val();
+  if (optionSelected === "refund-request") {
+    window.location.href = "refund_request.html";
+  } else {
+    return null;
+  }
+}
+
+function onNextEvent() {
+  let optionSelected = $('input[name=optionUseful]:checked').val();
+  if (optionSelected === "yes") {
+    window.location.href = "end.html";
+  } else {
+    return null;
+  }
+}
+
+function onInitPrevious() {
+  window.location.href = "index.html";
+}
 
 
 // https://www.w3schools.com/howto/howto_js_toggle_like.asp

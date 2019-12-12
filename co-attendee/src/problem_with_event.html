@@ -19,30 +19,7 @@
             <br>
             <!-- fieldsets -->
 
-            <!-- STEP 1 -->
-            <fieldset>
-            <div style="text-align: left;">
-                <h4>
-                    <div class="radio">
-                      <label>
-                        <span class="button"><input id="order-issue" type="radio" name="optionsRadios" value="order-issue"></span>
-                        <span class="question-label">I have a problem with the order I bought</span>
-                      </label>
-                    </div>
 
-                    <div class="radio">
-                      <label>
-                        <span class="button"><input id="event-issue" type="radio" name="optionsRadios" value="event-issue"></span>
-                        <span class="question-label">I want to know more about the event</span>
-                      </label>
-                    </div>
-                </h4>
-            </div>
-
-            <input onclick="onStart()" type="button" name="next" class="next action-button" value="Next"/>
-
-            </fieldset>
-            <!-- END STEP 1 -->
 
             <!-- STEP 2 -->
             <fieldset>
@@ -185,7 +162,7 @@
                           <label>
                             <span>
                                 </span>
-                            <span class="button"><input type="radio" name="optionsRadios" value="20"></span>
+                            <span class="button"><input type="radio" name="optionUseful" value="yes"></span>
 
                             <span class="question-label">Yes, thank you!</span>
                           </label>
@@ -193,7 +170,7 @@
 
                         <div class="radio">
                           <label>
-                            <span class="button"><input type="radio" name="optionsRadios" value="20" checked></span>
+                            <span class="button"><input type="radio" name="optionUseful" value="no" checked></span>
                             <span class="question-label">No, I want to contact the Organizer.</span>
                           </label>
                         </div>
@@ -202,8 +179,8 @@
 
             </div>
             <!-- END WRAPPER -->
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input id="final-question-btn" type="button" name="next" class="next action-button hide" value="Next"/>
+                <input onclick="onInitPrevious()" type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input onclick="onNextEvent()" id="final-question-btn" type="button" name="next" class="next action-button hide" value="Next"/>
             </fieldset>
             <!-- END STEP 2 -->
 
@@ -214,7 +191,7 @@
                 <input id="i-email" type="email" name="email" placeholder="Email Address" value="email@gmail.com" />
                 <input id="i-reason" type="text" name="reason" placeholder="Contact Reason" value="OTHER" />
                 <h3 class="fs-subtitle" style="text-align: left;">Message</h3>
-                <textarea id="i-message" class="form-control" rows="5" id="comment">Unfortunately I'm not able to attend tonight.</textarea>
+                <textarea id="i-message" class="form-control" rows="5" id="comment">Hi. Can I bring my daughter who is 6? Thanks.</textarea>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input id="success-btn" type="button" name="next" class="next action-button" value="Subtmit"/>
             </fieldset>
@@ -231,7 +208,7 @@
                 <p>
                   <span id="s-message"></span>
                 </p>
-
+                <h3 class="fs-subtitle"><a href="#">Track your messages</a></h3>
                 <!-- Use an element to toggle between a like/dislike icon -->
                 <h3 class="fs-subtitle">Did you like the tool?  <i onclick="onLike(this)" class="fa fa-thumbs-up"></i></h3>
 
