@@ -54,30 +54,42 @@
                 <h3 class="fs-subtitle">Email Address: </h3><span id="s-email"></span>
                 <h3 class="fs-subtitle">Contact Reason: </h3><span id="s-reason"></span> -->
                 <h3 class="fs-subtitle"><a href="#">Download</a> </h3>
+                <h3 class="fs-subtitle"><a href="index.html">Go to start</a></h3>
                 <p>
                   <span id="s-message"></span>
                 </p>
 
-                <!-- Use an element to toggle between a like/dislike icon -->
+                <!-- RATING -->
+                <span>How was your experience?</span>
+                <div class="row lead evaluation fs-subtitle">
+                    <div id="colorstar" class="starrr ratable" ></div>
+                    <span id="count" class="fs-subtitle">0</span> star(s) - <span id="meaning"> </span>
+
+                        <div class='indicators' style="display:none">
+                            <div id='textwr'>What went wrong?</div>
+                            <input id="rate[]" name="rate[]" type="text" placeholder="" class="form-control input-md" style="display:none;">
+                            <input id="rating[]" name="rating[]" type="text" placeholder="" class="form-control input-md rateval" style="display:none;">
+
+                            <span class="button-checkbox">
+                            <button type="button" class="btn criteria" data-color="info">Easy</button>
+                             <input type="checkbox" class="hidden"  />
+                            </span>
+                            <span class="button-checkbox">
+                            <button type="button" class="btn criteria" data-color="info">Quick</button>
+                             <input type="checkbox" class="hidden"  />
+                            </span>
+                            <span class="button-checkbox">
+                            <button type="button" class="btn criteria" data-color="info">Useful</button>
+                             <input type="checkbox" class="hidden"  />
+                            </span>
+                        </div>
+                </div>
                 <h3 class="fs-subtitle">Did you like the tool?  <i onclick="onLike(this)" class="fa fa-thumbs-up"></i></h3>
+                <!-- RATING -->
+
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
             </fieldset>
             <!-- END STEP 3 -->
-
-            <!-- STEP 3 -->
-            <fieldset>
-                <h2 class="fs-title">Contact the Organizer</h2>
-                <input id="i-name" type="text" name="name" placeholder="Your Name" value="Cristian Moyano" />
-                <input id="i-email" type="email" name="email" placeholder="Email Address" value="email@gmail.com" />
-                <input id="i-reason" type="text" name="reason" placeholder="Contact Reason" value="OTHER" />
-                <h3 class="fs-subtitle" style="text-align: left;">Message</h3>
-                <textarea id="i-message" class="form-control" rows="5" id="comment">Unfortunately I'm not able to attend tonight.</textarea>
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input id="success-btn" type="button" name="next" class="next action-button" value="Subtmit"/>
-            </fieldset>
-            <!-- END STEP 3 -->
-
-
 
         </form>
 
