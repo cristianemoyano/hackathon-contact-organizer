@@ -47,3 +47,8 @@ ul ul a {
     padding-left: 30px !important;
     background: #6d7fcc;
 }
+
+.table td.fit, .table th.fit {
+    white-space: nowrap;
+    width: 132px;
+  }
