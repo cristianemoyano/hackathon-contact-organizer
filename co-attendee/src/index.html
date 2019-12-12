@@ -1,4 +1,6 @@
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="style.css">
 
@@ -23,17 +25,13 @@
                 <h4>
                     <div class="radio">
                       <label>
-                        <span>
-                            <i class="fa fa-caret-right fa-2x wrong-answer" aria-hidden="true"></i></span>
                         <span class="button"><input type="radio" name="optionsRadios" value="20"></span>
-
                         <span class="question-label">I have a problem with the order I bought</span>
                       </label>
                     </div>
 
                     <div class="radio">
                       <label>
-                        <span><i class="fa fa-caret-right fa-2x correct-answer" aria-hidden="true"></i></span>
                         <span class="button"><input type="radio" name="optionsRadios" value="20" checked=""></span>
                         <span class="question-label">I want to know more about the event</span>
                       </label>
@@ -184,7 +182,7 @@
                         <div class="radio">
                           <label>
                             <span>
-                                <i class="fa fa-caret-right fa-2x wrong-answer" aria-hidden="true"></i></span>
+                                </span>
                             <span class="button"><input type="radio" name="optionsRadios" value="20"></span>
 
                             <span class="question-label">Yes, thank you!</span>
@@ -193,7 +191,6 @@
 
                         <div class="radio">
                           <label>
-                            <span><i class="fa fa-caret-right fa-2x correct-answer" aria-hidden="true"></i></span>
                             <span class="button"><input type="radio" name="optionsRadios" value="20" checked></span>
                             <span class="question-label">No, I want to contact the Organizer.</span>
                           </label>
@@ -215,7 +212,7 @@
                 <input id="i-email" type="email" name="email" placeholder="Email Address" value="email@gmail.com" />
                 <input id="i-reason" type="text" name="reason" placeholder="Contact Reason" value="OTHER" />
                 <h3 class="fs-subtitle" style="text-align: left;">Message</h3>
-                <textarea id="i-message" class="form-control" rows="5" id="comment">Unfortunatly Iam not able to attend tonight.</textarea>
+                <textarea id="i-message" class="form-control" rows="5" id="comment">Unfortunately I'm not able to attend tonight.</textarea>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input id="success-btn" type="button" name="next" class="next action-button" value="Subtmit"/>
             </fieldset>
@@ -224,7 +221,7 @@
             <!-- CONFIRM 4 -->
             <fieldset>
                 <h2 class="fs-title">Success</h2>
-                <img src="https://www.unibetcommunity.com/t5/image/serverpage/image-id/36758i2F0096A6F9B0B877/image-size/large/is-moderation-mode/true?v=1.0&px=999" alt="Success" width="300px">
+                <img src=" https://i.imgur.com/xFQ68rE.gif" alt="Success" width="300px">
                 <!-- <h3 class="fs-subtitle">Your name: </h3><span id="s-name"></span>
                 <h3 class="fs-subtitle">Email Address: </h3><span id="s-email"></span>
                 <h3 class="fs-subtitle">Contact Reason: </h3><span id="s-reason"></span> -->
@@ -232,6 +229,10 @@
                 <p>
                   <span id="s-message"></span>
                 </p>
+
+                <!-- Use an element to toggle between a like/dislike icon -->
+                <h3 class="fs-subtitle">Did you like the tool?  <i onclick="onLike(this)" class="fa fa-thumbs-up"></i></h3>
+
             </fieldset>
             <!-- END STEP 3 -->
 
