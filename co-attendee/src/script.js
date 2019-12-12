@@ -107,3 +107,9 @@ $(document).ready(function(){
     });
   });
 });
+
+
+// https://www.w3schools.com/howto/howto_js_toggle_like.asp
+function onLike(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
