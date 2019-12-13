@@ -51,4 +51,8 @@ ul ul a {
 .table td.fit, .table th.fit {
     white-space: nowrap;
     width: 132px;
-  }
+}
+
+#content {
+    flex: auto;
+}
